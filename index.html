@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>udemy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div id="head">
+<img src="https://frontends.udemycdn.com/frontends-homepage/staticx/udemy/images/v7/logo-udemy.svg" width="80px">
+<input type="text" placeholder="search for anything">
+<span>plan and pricing</span>
+<span>udemy bussiness</span>
+<span>teach on udemy</span>
+<img src="data:image/png;base64,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" width="40px">
+<button id="btn1" >Log in</button>
+<button id="btn2" >Sign up</button>
+
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/e6cc1a30-2dec-4dc5-b0f2-c5b656909d5b.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/10ca89f6-811b-400e-983b-32c5cd76725a.jpg" alt="Second slide">
+          </div>
+          
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      
+      <h1 id="text">All the skills you need in one place</h1>
+      <p id="place">From critical skills to technical topics, Udemy supports your professional development</p>
+      <div id="data">
+        <span> Data science </span>
+        <span>  IT Certification</span>
+        <span> Leadership </span>
+        <span>Web Devlopment </span>
+        <span>  communication</span>
+        <span> Bussiness Analytics & Intelligence </span>
+        <hr>
+        </div>
+        <br>
+        <br>
+        <div id="chat">
+          <button style="border-radius: 30px; border:1px solid black;" > ChatGPT</button>
+          <button style="border-radius: 30px; border:1px solid black"> Data Sciencr</button>
+          <button style="border-radius: 30px; border:1px solid black">Python </button>
+          <button style="border-radius: 30px; border:1px solid black">Machine Learning </button>
+          <button style="border-radius: 30px;border:1px solid black"> Deep Learning</button>
+          <button style="border-radius: 30px;border:1px solid black"> Artificial Intelligence</button>
+          <button style="border-radius: 30px;border:1px solid black"> Statastic</button>
+          <button style="border-radius: 30px;border:1px solid black"> Natural laguage processing</button>
+          
+        </div>
+        <div id="courses">
+          <div id="part1">
+            <img src="https://cdn.britannica.com/84/203584-131-357FBE7D/speed-internet-technology-background.jpg" width="250px">
+            <h4>The Data Science Course:
+               Complete Data Science  Bootcamp </h4>
+               <p>Complete Data Science 
+                 Training: Math,
+                
+            Statistics, Python, Advanced Statistics 
+             in Python, Machine and Deep Learning</p>
+             <img src="rupee-indian.png" width="25px"> <h4 style="display: inline;"> 649  </h4> 
+         
+        </div>
+        <div id="part2">
+          <img src="https://media.datacamp.com/legacy/v1646560927/shutterstock_1329434768_bf9003ea47.jpg" width="250px">
+          <h4>Python for Data Science and 
+             Machine Learning Bootcamp</h4>
+             <p>Learn how to use NumPy, Pandas,
+               Seaborn , Matplotlib , Plotly ,
+               Scikit-Learn , Machine Learning,
+                Tensorflow , and more!</p>
+                <img src="rupee-indian.png" width="25px"> <h4 style="display: inline;" >799</h4>
+
+        </div>
+        <div id="part3"> 
+          <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/06/R-Programming_02.png" width="250px">
+          <h4>
+            R Programming A-Z™: 
+             R For Data Science  
+             With Real Exercises!
+          </h4>
+          <p>Learn Programming In R And R Studio. 
+             Data Analytics, Data Science, 
+              Statistical Analysis, 
+               Packages, Functions, GGPlot2</p>
+          <img src="rupee-indian.png" width="25px"> <h4  style="display: inline;">799</h4>
+
+        </div>
+        <div id="part4">
+          <img src="https://www.naukri.com/campus/career-guidance/wp-content/uploads/2023/11/what-is-data-science.jpg" width="250px">
+          <h4>Data Science A-Z:  Hands-On 
+            Exercises  & ChatGPT Prize [2024]</h4>
+          <p>Learn Data  Science step by 
+            step through real Analytics 
+            examples. Data  Mining, Modeling, 
+             Tableau  Visualization and more!</p>
+          <img src="rupee-indian.png" width="25px"> <h4 style="display: inline;" >649</h4>
+        </div>
+        
+      
+      </div>
+      <br>
+      <br>
+      <hr>
+      <center>
+      <h5 style="color: rgb(129, 126, 126);">Trusted by over 16,000 companies and millions of learners around the world</h5>
+      </center>
+      <div class="trust">
+        
+        <img src="https://cms-images.udemycdn.com/content/tqevknj7om/svg/volkswagen_logo.svg?position=c&quality=80&x.app=portals" width="">
+        <img src="https://cms-images.udemycdn.com/content/2gevcc0kxt/svg/samsung_logo.svg?position=c&quality=80&x.app=portals" alt="">
+        <img src="https://cms-images.udemycdn.com/content/mueb2ve09x/svg/cisco_logo.svg?position=c&quality=80&x.app=portals" alt="">
+        <img src="https://cms-images.udemycdn.com/content/ryaowrcjb2/svg/vimeo_logo_resized-2.svg?position=c&quality=80&x.app=portals" alt="">
+        <img src="https://cms-images.udemycdn.com/content/bthyo156te/svg/procter_gamble_logo.svg?position=c&quality=80&x.app=portals" alt="">
+        <img src="https://cms-images.udemycdn.com/content/luqe0d6mx2/svg/hewlett_packard_enterprise_logo.svg?position=c&quality=80&x.app=portals" alt="">
+        <img src="https://cms-images.udemycdn.com/content/siaewwmkch/svg/citi_logo.svg?position=c&quality=80&x.app=portals" alt="">
+        <img src="https://cms-images.udemycdn.com/content/swmv0okrlh/svg/ericsson_logo.svg?position=c&quality=80&x.app=portals" alt="">
+
+      </div>
+      <hr>
+      <br>
+      <h2 class="hi">Learning focused on your goals</h2>
+      <div class="goals">
+        <div id="goals1">
+           <div id="goals1_1">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/7kN9RBFSMFNHzsGWsElMPi/dde73f8d1c47e046f035274e78410590/hands-on-practice.png" width="80px" style="padding-left: 20px;">
+               
+               <h3 style="display: inline;padding-left: 20px;">Hands on training</h3>
+               <br>
+               <p  style="display: inline;padding-left: 85px;">Upskill effectively with AI-powered coding exercises,</p> <br> 
+                <p style="display: inline;padding-left: 85px;" >practice tests, and quizzes.</p>
+
+           </div>
+           <br>
+           <div id="goals1_2">
+          <img src="https://cms-images.udemycdn.com/96883mtakkm8/2Xh9YHJustDwCEjn5IlO25/93e9b15c6e74876db0dec63466fcc5a0/certificate.png" width="80px" style="padding-left: 30px;">
+               
+               
+             <h3 style="display: inline;padding-left: 20px;">Certification prep</h3>
+             <br>
+             <p  style="display: inline;padding-left: 85px;">Prep for industry-recognized certifications by solving </p>
+               <br> <p style="display: inline;padding-left: 85px;" > real-world challenges and earn badges along the </p>
+         </div>
+         <br>
+         <div id="goals1_3">
+          
+          <img src="https://cms-images.udemycdn.com/96883mtakkm8/6w8plrr7vY9rIY46UuX0q5/2f0a3f0c22e99bd2d430b998c81321f2/empty-state-1.png" width="80px" style="padding-left: 30px;">  
+           <h3 style="display: inline;padding-left: 20px;">Insights and analytics</h3>
+           <br>
+           <p  style="display: inline;padding-left: 85px;">Fast-track goals with advanced insights plus a dedicated </p> 
+             <br> <p style="display: inline;padding-left: 85px;" >customer success team to help drive effective learning.</p>
+
+       </div>
+       <br>
+       <div id="goals1_4">
+        <img src="https://cms-images.udemycdn.com/96883mtakkm8/2tKGBrb1N60wox2Lh8j3tz/7f1528c9f88ea47bd6ebb46f345902c3/organizations-2.png" width="80px" style="padding-left: 30px;"> 
+               
+         <h3 style="display: inline;padding-left: 20px;">Customizable content</h3>
+         <br>
+         <p  style="display: inline;padding-left: 85px;">Create tailored learning paths for team and organization </p><br>
+          <p style="display: inline;padding-left: 85px;" > goals and even host your own content and resources.</p>
+
+     </div>
+           
+        </div>
+
+        <div id="goals2">
+         <img src="https://cms-images.udemycdn.com/96883mtakkm8/4kbyXne3Slx9Sfz4nTBqdf/8ac2b75db1a118f15e2fb5dfe2bb4567/desktop-hands-on-learning-2x.png" width="600">
+        </div>
+
+     </div>
+        <h2 id="acc">Accelerate growth — for you or your organization</h2>
+        <p style="padding-left: 50px;">Reach goals faster with one of our plans or programs. Try one free today or contact sales to learn more</p>
+      </div>
+
+      <div class="plan">
+        <div id="plan1">
+          <h4>Personal Plan</h4>
+          <p>For You</p>
+          <img src="user.png" width="30px"> <p  style="display: inline;">Individual</p>
+          <br>
+          <br>
+          <br>
+          <h5>Starting at ₹850 per month</h5>
+          <p>Billed monthly or annually. Cancel anytime.</p>
+          <br>
+          <button style="height: 50px; width: 350px; background-color: black; color: white;">Start Subscription -></button>
+          <br>
+          <br>
+          
+          <ul>
+            <li>
+              Access to 12,000+ top courses
+
+
+            </li>
+            <li>
+             
+              Certification prep
+              
+            </li>
+            <li>
+             
+              Goal-focused recommendations
+              
+            </li>
+            <li>
+              
+              AI-powered coding exercises
+            </li>
+          
+          </ul>
+
+        </div>
+        <div id="plan2">
+          <h4>Team Plan</h4>
+          <p>For your team</p>
+          <img src="people.png" width="30px"> <p  style="display: inline;">Individual</p>
+          <br>
+          <br>
+          <br>
+          <h5>₹2,000 a month per user</h5>
+          <p>Billed annually. Cancel anytime.</p>
+          <br>
+          <button style="height: 50px; width: 350px; background-color: black; color: white;">Start Subscription -></button>
+          <br>
+          <br>
+          
+          <ul>
+            <li>
+              Access to 12,000+ top courses
+
+
+            </li>
+            <li>
+             
+              Certification prep
+              
+            </li>
+            <li>
+             
+              Goal-focused recommendations
+              
+            </li>
+            <li>
+              
+              AI-powered coding exercises
+            </li>
+            <li>
+              Analytics and adoption reports
+            </li>
+          </ul>
+
+        </div>
+        <div id="plan3">
+          <h4>Enterprise Plan</h4>
+          <p>For your whole organization</p>
+          <img src="people.png" width="30px"> <p  style="display: inline;">Individual</p>
+          <br>
+          <br>
+          <br>
+          <h5>More than 20 people</h5>
+          <p>Contact sales for pricing.</p>
+          <br>
+          <button style="height: 50px; width: 350px; background-color: black; color: white;">Start Subscription -></button>
+          <br>
+          <br>
+          
+          <ul>
+            <li>
+              Access to 27,000+ top courses
+
+
+
+            </li>
+            <li>
+             
+             
+Certification prep
+
+              
+            </li>
+            <li>
+             
+         
+Goal-focused recommendations
+
+              
+            </li>
+            <li>
+              
+             
+AI-powered coding exercises
+
+            </li>
+            <li>
+   
+Advanced analytics and insights
+
+            </li>
+            <li>
+             
+              Dedicated customer success team
+              
+            </li>
+            <li>
+              
+              International course collection featuring 15 languages
+              
+            </li>
+            <li>
+             
+              Customizable content
+             
+            </li>
+            <li>
+             
+
+Hands-on tech training with add-on
+
+            </li>
+            <li>
+          
+Strategic implementation services with add-on
+            </li>
+          </ul>
+
+        </div>
+   </div>
+   <br>
+   <br>
+   <br>
+   <h2 id="see">
+    See what others are achieving through learning
+   </h2>
+   <div class="popular">
+    <div id="popular1">
+<img src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg" width="20px">
+<p>Udemy was rated the most popular online course or certification program for learning how to code according to</p>
+
+
+<br>
+<img src="https://cms-images.udemycdn.com/96883mtakkm8/2PBcNgsQa3SvYWklkiN27r/5b8707cc79c8cae5774d5eb3b88b4001/logo_stackoverflow.svg" alt="">
+<p style="font-size: 13px;">StackOverflow
+  37,076 responses collected</p>
+  <br>
+   <a href="#">View Web Devlopment Courses ></a>
+    </div>
+    <div id="popular2">
+      <img src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg" width="30px">
+<p>Udemy was truly a game-changer and a great guide for me as we brought Dimensional to life.</p>
+
+
+<br>
+<img src="https://cms-images.udemycdn.com/96883mtakkm8/1Djz6c0gZLaCG5SQS3PgUY/54b6fb8c85d8da01da95cbb94fa6335f/Alvin_Lim.jpeg" width="30px">
+<p style="display: inline; font-size: 12px;" >Alvin Lim
+  Technical Co-Founder, CTO at Dimensional</p>
+  <br>
+  <br>
+
+   <a href="#">View this IOS & Swift Course ></a>
+
+    </div>
+    <div id="popular3">
+     
+      <p>Udemy gives you the ability to be persistent. I learned exactly what I needed to know in the real world. It helped me sell myself to get a new role.</p>
+      
+      
+      <img src="https://cms-images.udemycdn.com/96883mtakkm8/6dT7xusLHYoOUizXeVqgUk/4317f63fe25b2e07ad8c70cda641014b/William_A_Wachlin.jpeg" width="30px">
+      <p style="font-size: 12px; display: inline;">William A. Wachlin
+        Partner Account Manager at Amazon Web Services</p>
+        <br>
+        <br>
+        
+        
+         <a href="#">View this AWS  Course ></a>
+    </div>
+    <div id="popular4">
+      <img src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg" width="25px">
+      <p>With Udemy Business employees were able to marry the two together, technology and consultant soft skills... to help drive their careers forward.</p>
+      
+      <img src="https://cms-images.udemycdn.com/96883mtakkm8/4w9dYD4F64ibQwsaAB01Z4/c4610e9b1ac65589d8b1374ad10714e2/Ian_Stevens.png" width="30px">
+      <p style="font-size: 12px; display: inline;" >Ian Stevens
+        Head of Capability Development, North America at Publicis Sapient</p>
+        <br>
+        <br>
+        
+         <a href="#">Read full story ></a>
+    </div>
+   </div>
+ 
+
+<h1 id="tre">
+  Trending Now
+</h1>
+<hr>
+
+<div class="reports">
+  <div id="reports1" style="width:30%">
+      <h1>Top trends for the future of work</h1>
+      <p>Our 2025 Global Learning & Skills Trends Report is out now! Find out how to build the skills to keep pace with change.</p>
+      <button style="height:50px; width:200px; font-size:20px">Get The Reports -></button>
+  </div>
+
+  <img src="https://cms-images.udemycdn.com/96883mtakkm8/1qvvR0FDKv9chruIpia6Sc/b2af22a0097e47de4e4354237e3f378c/Onsite_Desktop_GLSTR25.png" width="800">
+</div>
+<div class="treanding">
+  <div id="treanding1">
+    
+      <h2>ChatGPT is a top skill</h2>
+      <a href="#">See ChatGPT courses</a>
+      <p style="font-size: 13px;">3,867,945 learners</p>
+      <br>
+      
+      
+      <button style="height: 50px; width: 300px;">Show all trending skills</button>
+    </div>
+    
+  <div id="treanding2">
+    <h3>Development</h3>
+    <a href="#"> Python ></a>
+    <p>46,603,495 learners</p>
+    <a href="#">Web Development ></a>
+    <p>13,781,259 learners</p>
+    <a href="#">Data Science</a>
+    <p>13,781,259 learners</p>
+
+  </div>
+  <div id="treanding3">
+    <h3>Design</h3>
+    <a href="#"> blender ></a>
+    <p>2,814,226 learners</p>
+    <a href="#">Graphic Design ></a>
+    <p>4,408,781 learners</p>
+    <a href="#">User Experience (UX) Design ></a>
+    <p>2,026,710 learners</p>
+
+
+  </div>
+  <div id="treanding4">
+    <h3>Bussiness</h3>
+    <a href="#"> PMI Project Management Professioasnal (PMP) ></a>
+    <p>2,446,253 learners</p>
+    <a href="#">Microsoft Power BI ></a>
+    <p>4,416,417 learners</p>
+    <a href="#">project Management></a>
+    <p>3,818,974 learners</p>
+
+  </div>
+</div>
+<br>
+<br>
+<h1 style="padding-left: 40px;">Learners are viewing</h1>
+
+<div id="courses11">
+  <div id="part1_1">
+    <img src="https://i.ytimg.com/vi/-eELejNfGZg/maxresdefault.jpg" width="250px">
+    <h4>100 Days of course:The Complete Python Pro Bootcamp </h4>
+       <p>Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!</p>
+     <img src="rupee-indian.png" width="25px"> <h4 style="display: inline;"> 549 </h4> 
+ 
+</div>
+<div id="part1_2">
+  <img src="https://img-c.udemycdn.com/course/750x422/1565838_e54e_18.jpg" width="250px">
+  <h4>The Complete 2024 Web Development Bootcamp</h4>
+     <p>Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, PostgreSQL, Web3 and DApps</p>
+        <img src="rupee-indian.png" width="25px"> <h4 style="display: inline;" >549</h4>
+
+</div>
+<div id="part1_3"> 
+  <img src="https://images.ctfassets.net/aq13lwl6616q/1aSi4iO8n93Acgn95yodTY/a2d029c2e3b0ffd6ac70ef8a68f43ec8/AWS_Thumbnail_-_Academy_1.png" width="250px">
+  <h4>
+    [NEW] Ultimate AWS Certified Cloud Practitioner CLF-C02 2025
+  </h4>
+  <p>Full Practice Exam included + explanations | Learn Cloud Computing | Pass the AWS Cloud Practitioner CLF-C02 exam!</p>
+  <img src="rupee-indian.png" width="25px"> <h4  style="display: inline;">549</h4>
+
+</div>
+<div id="part1_4">
+  <img src="https://img-c.udemycdn.com/course/750x422/2196488_8fc7_10.jpg" width="250px">
+  <h4>Ultimate AWS Certified Solutions Architect Associate 2025</h4>
+  <p>Full Practice Exam | Learn Cloud Computing | Pass the AWS Certified Solutions Architect Associate Certification SAA-C03!</p>
+  <img src="rupee-indian.png" width="25px"> <h4 style="display: inline;" >549</h4>
+</div>
+
+
+</div>
+<div class="booz">
+  <div id="booz1" style="width:600px ;">
+    <h3>BOOZ| ALLEN | HAMILTON</h3>
+    <br>
+    
+    <h2>Booz Allen Hamilton Unlocks Talent Retention and Productivity Through Upskilling</h2>
+    <br>
+    <br>
+    <br>
+    <div id="booz1_1">
+   <h2 >93%</h2>
+   
+   <h3 style="display: inline;">retention rate among participating employees</h3>
+   <br>
+   <br>
+   <br>
+   <h2 style="padding-top: 10px;">65%</h2>
+   <h3>of learners noted a positive impact on their productivity</h3>
+   <hr>
+   
+</div>
+
+
+  </div>
+  <img src="https://cms-images.udemycdn.com/content/c4gpjcmcsk/png/UB_Case_Studies_Booz_Allen_image.png?position=c&quality=80&x.app=portals" width="500px" height="600px">
+</div>
+<div class="footer1">
+  <h4 style="color: white;">Top companies choose Udemy Business to build in-demand career skills.</h4>
+  <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt="">
+  <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg" alt="">
+  <img src="https://s.udemycdn.com/partner-logos/v4/box-light.svg" alt="">
+  <img src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg" alt="">
+  <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg" alt="">
+</div>
+
+<div class="footer2">
+  <div id="footer2_1">
+<a href="#">
+Udemy Bussiness
+</a>
+<br>
+<a href="#">
+Teach on Udemy
+</a>
+<br>
+<a href="#">
+Get The App
+</a>
+<br>
+<a href="#">
+About Us
+</a>
+<br>
+<a href="#">
+Contact Us
+</a>
+  </div>
+  <div id="footer2_2">
+<a href="#"> Careers</a> <b>
+<a href="#"> Blog</a> <br>
+<a href="#">Help And Support </a> <br>
+<a href="#"> Affiliate</a> <br>
+<a href="#">Investors </a> <br>
+  </div>
+  <div id="footer2_3">
+<a href="#"> Terms</a> <br>
+<a href="#"> Privacy policy</a> <br>
+<a href="#"> Cookie Settings</a> <br>
+<a href="#"> Sitemap</a> <br>
+<a href="#">Accessbility Statement </a> <br>
+  </div>
+</div>
+  
+
+
+
+      
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <hr>      
+</body>
+</html>
